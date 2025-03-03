@@ -35,13 +35,17 @@ body,
   margin-bottom: 1.5rem;
 }
 
-.delete-all-notes-btn {
-  display: flex;
-}
-
 .delete-all-notes-btn .icon {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
 }
 
 .create-new-btn .icon {
@@ -55,8 +59,8 @@ body,
 }
 
 .create-new-btn,
-.delete-all-notes-btn,
 .save-btn,
+.delete-all-notes-btn,
 .delete-btn {
   background-color: var(--background-color-items);
   border: none;

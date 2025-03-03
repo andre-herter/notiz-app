@@ -42,7 +42,6 @@ function deleteNote(id) {
 
 function deleteAllNotes() {
   localStorage.removeItem(LOCAL_STORAGE_KEY);
-  // localStorage.clear();
 }
 
 function getNextId() {

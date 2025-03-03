@@ -39,11 +39,10 @@ function displayNotesList() {
     <div class="note-entry" data-id="${note.id}">
         <div class="note-title">${escapeHtml(note.title)}</div>
         <div class="note-content-teaser">${escapeHtml(note.content)}</div>
-        <div class="note-date">${new Date(note.lastUpdated).toLocaleString(
-          "de-DE"
-        )}</div>
+        <div class="note-date">
+        ${new Date(note.lastUpdated).toLocaleString("de-DE")}
+        </div>
     </div>
-
 `;
   });
 
@@ -94,9 +93,11 @@ function clickDeleteAllNotes() {
 
 function removeDeleteAllNotesButton() {
   if (notesListEl.children.length === 0) {
-    deleteAllNotesButtonEl.style.display = "none";
+    deleteAllNotesButtonEl.classList.remove("visible");
+    deleteAllNotesButtonEl.classList.add("hidden");
   } else {
-    deleteAllNotesButtonEl.style.display = "flex";
+    deleteAllNotesButtonEl.classList.remove("hidden");
+    deleteAllNotesButtonEl.classList.add("visible");
   }
 }
 
